@@ -56,7 +56,7 @@ export default createUnplugin<Options>((options) => {
         executor: async ({ file }) => {
           if (ctx.dirs?.some(dir => pm.isMatch(slash(file), slash(typeof dir === 'string' ? dir : dir.glob))))
             await ctx.scanDirs()
-        }
+        },
       },
       async configResolved(config) {
         if (ctx.root !== config.root) {
@@ -64,6 +64,6 @@ export default createUnplugin<Options>((options) => {
           await ctx.scanDirs()
         }
       },
-    }
+    },
   }
 })
