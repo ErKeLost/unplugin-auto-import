@@ -117,6 +117,16 @@
         "default": "./dist/esbuild.cjs"
       }
     },
+    "./farm": {
+      "import": {
+        "types": "./dist/farm.d.ts",
+        "default": "./dist/farm.js"
+      },
+      "require": {
+        "types": "./dist/farm.d.cts",
+        "default": "./dist/farm.cjs"
+      }
+    },
     "./*": "./*"
   },
   "main": "dist/index.cjs",
@@ -139,7 +149,7 @@
   },
   "scripts": {
     "build": "tsup src/*.ts --format cjs,esm --dts --splitting --clean",
-    "dev": "tsup src/*.ts --watch src",
+    "dev": "tsup src/*.ts --format cjs,esm --watch src",
     "lint": "eslint .",
     "lint:fix": "nr lint --fix",
     "typecheck": "tsc",
@@ -169,9 +179,11 @@
     "magic-string": "^0.30.17",
     "picomatch": "^4.0.2",
     "unimport": "^3.14.5",
-    "unplugin": "^2.1.2"
+    "unplugin": "/Users/adny/typescript/unplugin"
   },
   "devDependencies": {
+    "@farmfe/core": "/Users/adny/rust/farm/packages/core",
+    "@farmfe/cli": "/Users/adny/rust/farm/packages/cli",
     "@antfu/eslint-config": "^3.12.1",
     "@antfu/ni": "^0.23.2",
     "@nuxt/kit": "^3.15.1",

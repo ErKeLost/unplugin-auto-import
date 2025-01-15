@@ -1,18 +1,22 @@
 {
   "private": true,
   "scripts": {
-    "dev": "vite --open",
-    "build": "vite build"
+    "dev": "farm dev",
+    "build": "farm build"
   },
   "dependencies": {
     "@vueuse/core": "^12.0.0",
     "vue": "3.3.4"
   },
   "devDependencies": {
+    "@farmfe/cli": "/Users/adny/rust/farm/packages/cli",
+    "@farmfe/core": "/Users/adny/rust/farm/packages/core",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/compiler-sfc": "^3.5.13",
     "element-plus": "^2.8.8",
-    "unplugin-vue-components": "^0.27.4",
+    "unplugin-auto-import": "/Users/adny/typescript/unplugin-auto-import",
+    "unplugin-vue": "/Users/adny/typescript/unplugin-vue",
+    "unplugin-vue-components": "/Users/adny/typescript/unplugin-vue-components",
     "vite": "^6.0.1",
     "vite-plugin-inspect": "^0.10.0"
   }
